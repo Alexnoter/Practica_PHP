@@ -14,7 +14,7 @@ class CourseFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this->faker->sentences,
+            'name'=>$this->faker->sentence,
             'slug'=>$this->faker->slug,
             'image'=>$this->faker->imageUrl(1280,720),
             'description'=>$this->faker->text(800),
