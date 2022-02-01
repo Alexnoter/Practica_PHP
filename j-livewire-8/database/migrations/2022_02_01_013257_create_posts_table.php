@@ -17,12 +17,9 @@ class CreatePostsTable extends Migration
             $table->id();
             
             $table->unsignedBigInteger('course_id');
-            ;
 
             $table->string('name');
-            $table->string('free')->default(0);
-            $table->string('image');
-            $table->text('descripcion');
+            $table->boolean('free')->default(0);
 
             $table->timestamps();
 

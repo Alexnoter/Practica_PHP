@@ -22,7 +22,7 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->text('descripcion');
+            $table->text('description');
 
             $table->timestamps();
 

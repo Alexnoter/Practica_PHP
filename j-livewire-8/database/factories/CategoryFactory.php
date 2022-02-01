@@ -13,8 +13,9 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
+        //iniciamos la segunda parte sembrando datos falsos
         return [
-            //
+            'name'=> $this->faker->word
         ];
     }
 }
