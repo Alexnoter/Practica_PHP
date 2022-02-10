@@ -13,4 +13,11 @@ class Course extends Model
     {
         return $this->belongsTo(User::class);
     }
+    //colocamos el nombre del campo virtual en medio de get<nombre>Attribute
+    //ese campo se especifico en course-list 
+    public function getExcerptAttribute()
+    {
+        //nos retorna la descripcion pero solo los caracteres del 0 al 80 luego completa con "..."
+        return substr($this->description, 0,80) . "...";    
+    }
 }
