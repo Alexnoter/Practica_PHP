@@ -59,7 +59,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function getavAtarAttribute()
+    public function getAvatarAttribute()
     {
         //gravatar = cada  usuario de internet tiene un avatar en wordpress
         $email = md5($this->email);
