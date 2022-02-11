@@ -9,6 +9,7 @@ class Course extends Model
 {
     use HasFactory;
 
+    //la relaciones
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -23,5 +24,14 @@ class Course extends Model
     {
         //nos retorna la descripcion pero solo los caracteres del 0 al 80 luego completa con "..."
         return substr($this->description, 0,80) . "...";    
+    }
+
+    //este es un metodo personalizado
+    public function similar()
+    {
+        return  $this->where('category_id', $this->category_id)
+            ->with('user')
+            ->take(2)
+            ->get();
     }
 }
