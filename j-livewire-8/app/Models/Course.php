@@ -13,6 +13,10 @@ class Course extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
     //colocamos el nombre del campo virtual en medio de get<nombre>Attribute
     //ese campo se especifico en course-list 
     public function getExcerptAttribute()
